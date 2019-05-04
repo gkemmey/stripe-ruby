@@ -19,6 +19,9 @@ module Stripe
     nested_resource_class_methods :tax_id,
                                   operations: %i[create retrieve delete list]
 
+    nested_resource_class_methods :customer_balance_transaction,
+                                  operations: %i[create retrieve list]
+
     # The API request for deleting a card or bank account and for detaching a
     # source object are the same.
     class << self
